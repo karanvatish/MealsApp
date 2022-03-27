@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/Screens/meal_details.dart';
+import 'package:meals_app/Screens/meal_details_screen.dart';
 import './Screens/category_meal_screen.dart';
 import './Screens/category_screen.dart';
 
@@ -28,23 +28,28 @@ class MyApp extends StatelessWidget {
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
               headline1: const TextStyle(
-                fontSize: 20,
+                fontSize: 26,
                 fontFamily: 'RobotoCondensed',
                 fontWeight: FontWeight.bold,
+              ),
+              headline2: const TextStyle(
+                fontSize: 20,
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.w900,
               ),
             ),
       ),
       home: CategoryScreen(),
       routes: {
         CategoryMealScreen.routeName: (context) => CategoryMealScreen(),
-        MealDetails.routeName: (context) => MealDetails()
+        MealDetailsScreen.routeName: (context) => MealDetailsScreen()
       },
       onGenerateRoute: (settings) {
         print(settings.arguments);
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(
-          builder: (context) => MealDetails(),
+          builder: (context) => MealDetailsScreen(),
         );
       },
     );
