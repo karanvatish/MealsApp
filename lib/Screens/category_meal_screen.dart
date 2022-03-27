@@ -3,6 +3,7 @@ import 'package:meals_app/Widgets/meal_item.dart';
 import '../dummy_data.dart';
 
 class CategoryMealScreen extends StatelessWidget {
+  static const routeName = "/category-meals";
   const CategoryMealScreen({Key? key}) : super(key: key);
 
   @override
