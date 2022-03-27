@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
+import 'package:meals_app/Widgets/meal_item.dart';
+import '../dummy_data.dart';
 
 class CategoryMealScreen extends StatelessWidget {
   const CategoryMealScreen({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class CategoryMealScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(title: Text(categoryTitle!)),
         body: ListView.builder(
-          itemBuilder: (context, index) => Text(categoryMeal[index].title),
+          itemBuilder: (context, index) => MealItem(meal: categoryMeal[index]),
           itemCount: categoryMeal.length,
         ));
   }
