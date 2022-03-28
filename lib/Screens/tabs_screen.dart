@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/Screens/category_screen.dart';
 import 'package:meals_app/Screens/favorite_screen.dart';
+import 'package:meals_app/Widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({Key? key}) : super(key: key);
@@ -32,6 +33,7 @@ class _TabsScreenState extends State<TabsScreen> {
         title: const Text("Meals App"),
       ),
       body: _pages[_selectedPageIndex]['page'] as Widget,
+      drawer: MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         // ignore: prefer_const_literals_to_create_immutables
         items: [
